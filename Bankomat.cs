@@ -2,14 +2,14 @@
 
 public class Bankomat
 {
-    public static void Main(String[] args)
+    public static void Main1(String[] args)
     {
         int account = 0;
         
         //dodělat loop
         
         System.Console.WriteLine("Vyberte akci:\n 1 = Vypsat zůstatek na účtě\n 2 = Vložit peníze na účet\n 3 = Donate bance\n 4 = Free money\n 5 = Game mode\n 6 = Exit");
-        int input = Console.Read() - '0'; //hnus! změnit
+        int input = int.Parse(Console.ReadLine());
         Console.WriteLine(input);
         if (input == 1)
         {
