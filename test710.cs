@@ -2,7 +2,7 @@
 
 public class test710
 {
-    public static void Main(String[] args)
+    public static void Main1(String[] args)
     {
         ageToArmy();
         evenNumber();
