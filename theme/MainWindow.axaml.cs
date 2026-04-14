@@ -1,5 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Media;
 
 namespace theme;
 
@@ -17,16 +18,17 @@ public partial class MainWindow : Window
 
     private void lightTheme(object? sender, RoutedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        mainWindow.Background="White";
+        this;
     }
 
     private void darkTheme(object? sender, RoutedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     private void blueTheme(object? sender, RoutedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        
     }
 }

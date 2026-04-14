@@ -4,7 +4,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="theme.MainWindow"
-        Title="Nastavení Aplikace">
+        Title="Nastavení Aplikace"
+        Background="Blue"
+        x:Name="mainWindow">
     <StackPanel Margin="20">
         <TextBlock Text="Nastavení Aplikace" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
 
