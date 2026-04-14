@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="club.MainWindow"
+        Title="Přihláška do kroužku">
+    <StackPanel Margin="20">
+        <TextBlock Text="Přihláška do školního kroužku" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <TextBlock Text="Jméno a příjmení:"/>
+        <TextBox Name="NameTextBox" Margin="0,5,0,10"/>
+
+        <TextBlock Text="Datum narození:"/>
+        <DatePicker Name="BirthDatePicker" Margin="0,5,0,10"/>
+
+        <TextBlock Text="Výběr kroužku:"/>
+        <StackPanel Margin="0,5,0,10">
+            <RadioButton Name="ProgrammingRadioButton" Content="Programování" GroupName="Club"/>
+            <RadioButton Name="RoboticsRadioButton" Content="Robotika" GroupName="Club"/>
+            <RadioButton Name="GraphicsRadioButton" Content="Grafika" GroupName="Club"/>
+        </StackPanel>
+
+        <CheckBox Name="HasLaptopCheckBox" Content="Mám vlastní notebook" Margin="0,5,0,5"/>
+        <CheckBox Name="AgreesToRulesCheckBox" Content="Souhlasím s pravidly kroužku" Margin="0,5,0,10"/>
+
+        <Button Name="SubmitButton" Content="Odeslat přihlášku" HorizontalAlignment="Center" Margin="0,10,0,10" Click="SubmitButton_OnClick"/>
+
+        <TextBlock Name="OutputTextBlock" Text="" Margin="0,10,0,0" TextWrapping="Wrap"/>
+    </StackPanel>
+</Window>
