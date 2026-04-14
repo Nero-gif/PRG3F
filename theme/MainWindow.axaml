@@ -5,7 +5,7 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="theme.MainWindow"
         Title="Nastavení Aplikace"
-        Background="Blue"
+        Background="Black"
         x:Name="mainWindow">
     <StackPanel Margin="20">
         <TextBlock Text="Nastavení Aplikace" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
@@ -13,14 +13,14 @@
         <GroupBox Header="Výběr motivu" Margin="0,0,0,10">
             <StackPanel>
                 <RadioButton Content="Světlý" GroupName="Theme" Click="lightTheme"/>
-                <RadioButton Content="Tmavý" GroupName="Theme" Click="darkTheme"/>
+                <RadioButton Content="Tmavý" GroupName="Theme" Click="darkTheme" IsChecked="true"/>
                 <RadioButton Content="Modrý" GroupName="Theme" Click="blueTheme"/>
             </StackPanel>
         </GroupBox>
 
-        <CheckBox Content="Zapnout zvuky" Margin="0,5"/>
-        <CheckBox Content="Zobrazovat tipy při spuštění" Margin="0,5"/>
-        <CheckBox Content="Automatické ukládání" Margin="0,5"/>
+        <CheckBox x:Name="sound" Content="Zapnout zvuky" Margin="0,5"/>
+        <CheckBox x:Name="tips" Content="Zobrazovat tipy při spuštění" Margin="0,5"/>
+        <CheckBox x:Name="save" Content="Automatické ukládání" Margin="0,5"/>
 
         <Button Content="Uložit nastavení" Margin="0,20,0,0" Click="SubmitClick"/>
 
