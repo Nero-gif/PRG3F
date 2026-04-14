@@ -5,13 +5,24 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="pizza.MainWindow"
         Title="pizza">
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
-        <TextBlock Text="Pizzzzza" FontSize="24" Margin="20"/>
-        <TextBox Margin="20">jméno</TextBox>
-        <Grid ColumnDefinitions="Auto,Auto,Auto">
-            <RadioButton Grid.Column="0" Margin="20">S</RadioButton>
-            <RadioButton Grid.Column="1" Margin="20">M</RadioButton>
-            <RadioButton Grid.Column="2" Margin="20">L</RadioButton>
-        </Grid>
-    </StackPanel>
+    <Grid RowDefinitions="*,Auto,*">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Spacing="10" MinWidth="300">
+            <TextBlock Text="Pizzzzza" FontSize="24" HorizontalAlignment="Center" />
+            <TextBox x:Name="name" PlaceholderText="jméno"/>
+            <Grid ColumnDefinitions="Auto,Auto,Auto" HorizontalAlignment="Center" ColumnSpacing="10">
+                <RadioButton x:Name="S" Grid.Column="0" >S</RadioButton>
+                <RadioButton Name="M" Grid.Column="1" >M</RadioButton>
+                <RadioButton Name="L" Grid.Column="2" >L</RadioButton>
+            </Grid>
+            <TextBlock Text="Extra ingredients" HorizontalAlignment="Center"/>
+            <Grid ColumnDefinitions="Auto,Auto,Auto,Auto" HorizontalAlignment="Center" ColumnSpacing="10">
+                <CheckBox Grid.Column="0" x:Name="cheese">Cheese</CheckBox>
+                <CheckBox Grid.Column="1" x:Name="ham">Ham</CheckBox>
+                <CheckBox Grid.Column="2" x:Name="mushrooms">Mushrooms</CheckBox>
+                <CheckBox Grid.Column="3" x:Name="olives">Olives</CheckBox>
+            </Grid>
+            <Button Name="confirm" HorizontalAlignment="Stretch" Click="Confirm_OnClick">Place order</Button>
+            <TextBlock x:Name="output" HorizontalAlignment="Center"></TextBlock>
+        </StackPanel>
+    </Grid>
 </Window>
