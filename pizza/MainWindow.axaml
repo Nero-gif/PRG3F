@@ -1,0 +1,17 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="pizza.MainWindow"
+        Title="pizza">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+        <TextBlock Text="Pizzzzza" FontSize="24" Margin="20"/>
+        <TextBox Margin="20">jméno</TextBox>
+        <Grid ColumnDefinitions="Auto,Auto,Auto">
+            <RadioButton Grid.Column="0" Margin="20">S</RadioButton>
+            <RadioButton Grid.Column="1" Margin="20">M</RadioButton>
+            <RadioButton Grid.Column="2" Margin="20">L</RadioButton>
+        </Grid>
+    </StackPanel>
+</Window>
