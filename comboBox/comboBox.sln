@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "comboBox", "comboBox.csproj", "{4C3E4D53-CCC9-4B79-8063-128B8315FDDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C3E4D53-CCC9-4B79-8063-128B8315FDDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C3E4D53-CCC9-4B79-8063-128B8315FDDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C3E4D53-CCC9-4B79-8063-128B8315FDDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C3E4D53-CCC9-4B79-8063-128B8315FDDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
