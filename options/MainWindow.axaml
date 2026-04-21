@@ -1,0 +1,60 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="options.MainWindow"
+        Title="Options"
+        Background="#2E2E2E">
+
+    <Window.Styles>
+        <Style Selector="TextBlock">
+            <Setter Property="Foreground" Value="#E0E0E0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style Selector="TextBlock.Header">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="10,10,10,5"/>
+        </Style>
+        <Style Selector="CheckBox, RadioButton">
+            <Setter Property="Foreground" Value="#E0E0E0"/>
+            <Setter Property="Margin" Value="10,5"/>
+        </Style>
+        <Style Selector="Border">
+            <Setter Property="Background" Value="#3C3C3C"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </Window.Styles>
+
+    <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,*" Margin="10">
+        
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="System Options" Classes="Header"/>
+        
+        <Border Grid.Row="1" Grid.Column="0">
+            <StackPanel>
+                <CheckBox Click="X_Settings_OnClick" x:Name="Sounds">Sounds On</CheckBox>
+                <CheckBox Click="X_Settings_OnClick" x:Name="Subtitles">Subtitles On</CheckBox>
+                <CheckBox Click="X_Settings_OnClick" x:Name="Theme">Dark Theme</CheckBox>
+            </StackPanel>
+        </Border>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" x:Name="Settings" Margin="15,5"/>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="How do you travel to school" Classes="Header"/>
+
+        <Border Grid.Row="1" Grid.Column="1">
+            <StackPanel>
+                <RadioButton Click="X_Travel_OnClick" x:Name="Walk" GroupName="Travel">Walk</RadioButton>
+                <RadioButton Click="X_Travel_OnClick" x:Name="Mhd" GroupName="Travel">MHD</RadioButton>
+                <RadioButton Click="X_Travel_OnClick" x:Name="Helicopter" GroupName="Travel">Helicopter</RadioButton>
+            </StackPanel>
+        </Border>
+        
+        <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Travel" Margin="15,5"/>
+
+    </Grid>
+</Window>
