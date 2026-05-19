@@ -80,6 +80,7 @@
                         <TextBlock Name="CpCLevel" Text="Level: 0" Classes="Info"/>
                         <TextBlock Name="CpCPrice" Text="Price: 0" Classes="Info"/>
                         <TextBlock Name="CpCValue" Text="Value: 0" Classes="Info"/>
+                        <TextBlock Name="CpCDescription" Text="Cookies per Click" Classes="Info"></TextBlock>
                     </StackPanel>
                 </StackPanel>
             </Button>
@@ -95,6 +96,7 @@
                         <TextBlock Name="CpSLevel" Text="Level: 0" Classes="Info"/>
                         <TextBlock Name="CpSPrice" Text="Price: 0" Classes="Info"/>
                         <TextBlock Name="CpSValue" Text="Value: 0" Classes="Info"/>
+                        <TextBlock Name="CpSDescription" Text="Cookies per Second" Classes="Info"></TextBlock>
                     </StackPanel>
                 </StackPanel>
             </Button>
@@ -110,6 +112,7 @@
                         <TextBlock Name="CpCMultiplicatorLevel" Text="Level: 0" Classes="Info"/>
                         <TextBlock Name="CpCMultiplicatorPrice" Text="Price: 0" Classes="Info"/>
                         <TextBlock Name="CpCMultiplicatorValue" Text="Value: 0" Classes="Info"/>
+                        <TextBlock Name="CpCMultiplicatorDescription" Text="Multiplicator for cookies per click" Classes="Info"></TextBlock>
                     </StackPanel>
                 </StackPanel>
             </Button>
@@ -125,6 +128,7 @@
                         <TextBlock Name="CpSMultiplicatorLevel" Text="Level: 0" Classes="Info"/>
                         <TextBlock Name="CpSMultiplicatorPrice" Text="Price: 0" Classes="Info"/>
                         <TextBlock Name="CpSMultiplicatorValue" Text="Value: 0" Classes="Info"/>
+                        <TextBlock Name="CpSMultiplicatorDescription" Text="Multiplicator for cookies per second" Classes="Info"></TextBlock>
                     </StackPanel>
                 </StackPanel>
             </Button>
