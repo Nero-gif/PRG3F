@@ -15,7 +15,7 @@ public class Variables
     public double CpS { get; set; } = 0;
     public double CpC { get; set; } = 1;
     
-    public string CookieName { get; set; } = " cookiee";
+    public string CookieName { get; set; } = " cookie";
 }
 
 

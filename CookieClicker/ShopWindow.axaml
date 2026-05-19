@@ -4,6 +4,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="CookieClicker.ShopWindow"
-        Title="ShopWindow">
-    Welcome to Avalonia!
+        Title="Shop">
+
+    <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" RowSpacing="15" ColumnSpacing="15" Margin="15">
+
+        <!-- CpC Button -->
+        <Border Grid.Row="0" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5">
+            <Button Name="CpC" Click="CpC_OnClick" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+                    <Image Source="avares://CookieClicker/Images/coursor.png" Width="60" Height="60" />
+                    <StackPanel Spacing="2">
+                        <TextBlock Text="Cursor Upgrade" FontWeight="Bold" FontSize="14"/>
+                        <TextBlock Name="CpCLevel" Text="Level: 0"/>
+                        <TextBlock Name="CCpCrice" Text="Price: 0"/>
+                        <TextBlock Name="CpCValue" Text="Value: 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+        </Border>
+
+        <!-- CpS Button -->
+        <Border Grid.Row="0" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5">
+            <Button Name="CpS" Click="CpS_OnClick" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+                    <Image Source="avares://CookieClicker/Images/timer.png" Width="60" Height="60" />
+                    <StackPanel Spacing="2">
+                        <TextBlock Text="Auto-Clicker" FontWeight="Bold" FontSize="14"/>
+                        <TextBlock Name="CpSLevel" Text="Level: 0"/>
+                        <TextBlock Name="CpSPrice" Text="Price: 0"/>
+                        <TextBlock Name="CpSValue" Text="Value: 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+        </Border>
+
+        <!-- CpCmultiplicator Button -->
+        <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5">
+            <Button Name="CpCmultiplicator" Click="CpCmultiplicator_OnClick" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+                    <Image Source="avares://CookieClicker/Images/grandma.jpeg" Width="60" Height="60" />
+                    <StackPanel Spacing="2">
+                        <TextBlock Text="Grandma Power" FontWeight="Bold" FontSize="14"/>
+                        <TextBlock Name="CpCMultiplicatorLevel" Text="Level: 0"/>
+                        <TextBlock Name="CpCMultiplicatorPrice" Text="Price: 0"/>
+                        <TextBlock Name="CpCMultiplicatorValue" Text="Value: 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+        </Border>
+
+        <!-- CpSmultiplicator Button -->
+        <Border Grid.Row="1" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5">
+            <Button Name="CpSmultiplicator" Click="CpSmultiplicator_OnClick" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+                    <Image Source="avares://CookieClicker/Images/factory.png" Width="60" Height="60" />
+                    <StackPanel Spacing="2">
+                        <TextBlock Text="Factory Boost" FontWeight="Bold" FontSize="14"/>
+                        <TextBlock Name="CpSMultiplicatorLevel" Text="Level: 0"/>
+                        <TextBlock Name="CpSMultiplicatorPrice" Text="Price: 0"/>
+                        <TextBlock Name="CpSMultiplicatorValue" Text="Value: 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+        </Border>
+
+    </Grid>
 </Window>
