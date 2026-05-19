@@ -2,8 +2,50 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
         x:Class="CookieClicker.MainWindow"
-        Title="CookieClicker">
-    Welcome to Avalonia!
+        Title="CookieClicker"
+        Background="#2D2D2D">
+    <Window.Styles>
+        <Style Selector="Button.cookieButton">
+            <Setter Property="Transitions">
+                <Transitions>
+                    <DoubleTransition Property="Opacity" Duration="0.2"/>
+                    <TransformOperationsTransition Property="RenderTransform" Duration="0.2"/>
+                </Transitions>
+            </Setter>
+        </Style>
+        <Style Selector="Button.cookieButton:pointerover">
+            <Setter Property="Opacity" Value="0.9"/>
+            <Setter Property="RenderTransform" Value="scale(1.05)"/>
+        </Style>
+        <Style Selector="Button.cookieButton:pressed">
+            <Setter Property="RenderTransform" Value="scale(0.95)"/>
+        </Style>
+        <Style Selector="Button.navButton">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+    </Window.Styles>
+    
+    <Grid RowDefinitions="Auto,*" ColumnDefinitions="*,*">
+        
+        <!-- Header -->
+        <Button Grid.Row="0" Grid.Column="0" Content="Shop" Name="ShopButton" Click="Shop_OnClick" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20" Classes="navButton accent"/>
+        <Button Grid.Row="0" Grid.Column="1" Content="Settings" Name="SettingsButton" Click="Settings_OnClick" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="20" Classes="navButton"/>
+
+        <!-- Main Content -->
+        <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="30">
+            <TextBlock Name="CookieCount" Text="0 Cookies" FontSize="56" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Name="CPS" Text="0 cookies per second" HorizontalAlignment="Center"></TextBlock>
+            <Button Name="CookieButton" Classes="cookieButton" Click="Cookie_OnClick" Background="Transparent" BorderThickness="0">
+                <Border CornerRadius="150" Width="300" Height="300" ClipToBounds="True">
+                    <Image Source="avares://CookieClicker/Images/ggfsdfd.jpg" Width="300" Height="300" Stretch="UniformToFill"/>
+                </Border>
+            </Button>
+        </StackPanel>
+        
+    </Grid>
 </Window>
