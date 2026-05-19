@@ -61,7 +61,7 @@
         </Style>
     </Window.Styles>
 
-    <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,*,*" RowSpacing="20" ColumnSpacing="20" Margin="20">
+    <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,*,*,*" RowSpacing="20" ColumnSpacing="20" Margin="20">
 
         <TextBlock Grid.Row="0"
                    Grid.Column="0"
@@ -129,6 +129,38 @@
                         <TextBlock Name="CpSMultiplicatorPrice" Text="Price: 0" Classes="Info"/>
                         <TextBlock Name="CpSMultiplicatorValue" Text="Value: 0" Classes="Info"/>
                         <TextBlock Name="CpSMultiplicatorDescription" Text="Multiplicator for cookies per second" Classes="Info"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+        </Border>
+
+        <!-- Extra Energy Item -->
+        <Border Grid.Row="3" Grid.Column="0" Classes="ShopItem">
+            <Button Name="ExtraEnergy" Click="ExtraEnergy_OnClick">
+                <StackPanel Orientation="Horizontal" Spacing="15">
+                    <Image Source="avares://CookieClicker/Images/energy.png" Width="60" Height="60" />
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Extra Energy" Classes="Title"/>
+                        <TextBlock Name="ExtraEnergyLevel" Text="Level: 0" Classes="Info"/>
+                        <TextBlock Name="ExtraEnergyPrice" Text="Price: 1000" Classes="Info"/>
+                        <TextBlock Name="ExtraEnergyValue" Text="Value: 0" Classes="Info"/>
+                        <TextBlock Name="ExtraEnergyDescription" Text="Click per second booster for 15 seconds" Classes="Info"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+        </Border>
+
+        <!-- Mode Item -->
+        <Border Grid.Row="3" Grid.Column="1" Classes="ShopItem">
+            <Button Name="Mode" Click="Mode_OnClick">
+                <StackPanel Orientation="Horizontal" Spacing="15">
+                    <Image Source="avares://CookieClicker/Images/questionMark.png" Width="60" Height="60" />
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Mode" Classes="Title"/>
+                        <TextBlock Name="ModeLevel" Text="Level: 0" Classes="Info"/>
+                        <TextBlock Name="ModePrice" Text="Price: 2000" Classes="Info"/>
+                        <TextBlock Name="ModeValue" Text="Value: 0" Classes="Info"/>
+                        <TextBlock Name="ModeDescription" Text="new mode" Classes="Info"></TextBlock>
                     </StackPanel>
                 </StackPanel>
             </Button>

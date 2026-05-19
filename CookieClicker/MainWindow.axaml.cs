@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Media.Imaging;
@@ -20,6 +21,8 @@ public class Variables
     public Upgrade CpC { get; } = new Upgrade { Level = 0, Price = 1, Value = 1 };
     public Upgrade CpCMultiplicator { get; } = new Upgrade { Level = 0, Price = 100, Value = 1 };
     public Upgrade CpSMultiplicator { get; } = new Upgrade { Level = 0, Price = 100, Value = 1 };
+    public Upgrade ExtraEnergy { get; } = new Upgrade { Level = 0, Price = 1000, Value = 0 };
+    public Upgrade Mode { get; } = new Upgrade { Level = 0, Price = 2000, Value = 0 };
     
     public int ClickCount { get; set; } = 0;
     public int UpgradeCount { get; set; } = 0;
@@ -34,34 +37,88 @@ public class Upgrade
 
 public partial class MainWindow : Window
 {
+    private readonly DispatcherTimer _cpsTimer = new();
+    private readonly DispatcherTimer _extraEnergyTimer = new();
+    private readonly List<ShopWindow> _shopWindows = new();
+    private int _extraEnergyRemainingSeconds;
+    private SettingsWindow? _settingsWindow;
     
     public MainWindow()
     {
         InitializeComponent();
         
-        var timer = new DispatcherTimer();
-        timer.Interval = TimeSpan.FromSeconds(1);
-        timer.Tick += Timer_Tick;
-        timer.Start();
+        _cpsTimer.Interval = TimeSpan.FromSeconds(1);
+        _cpsTimer.Tick += Timer_Tick;
+        _cpsTimer.Start();
+
+        _extraEnergyTimer.Interval = TimeSpan.FromSeconds(1);
+        _extraEnergyTimer.Tick += ExtraEnergyTimer_Tick;
     }
 
     private void Timer_Tick(object? sender, EventArgs eventArgs)
     {
         Variables.Instance.CookieCount += Variables.Instance.CpS.Value * Variables.Instance.CpSMultiplicator.Value;
         ValueUpdater();
+        UpdateOpenShopWindows();
+    }
+
+    private void ExtraEnergyTimer_Tick(object? sender, EventArgs eventArgs)
+    {
+        _extraEnergyRemainingSeconds--;
+
+        if (_extraEnergyRemainingSeconds <= 0)
+        {
+            _extraEnergyTimer.Stop();
+            _cpsTimer.Interval = TimeSpan.FromSeconds(1);
+            EnergyBoostStatus.IsVisible = false;
+            EnergyBoostStatus.Text = "";
+            return;
+        }
+
+        UpdateEnergyBoostStatus();
+    }
+
+    public void ActivateExtraEnergy()
+    {
+        _extraEnergyRemainingSeconds = 15;
+        _cpsTimer.Interval = TimeSpan.FromSeconds(0.05);
+        UpdateEnergyBoostStatus();
+        _extraEnergyTimer.Stop();
+        _extraEnergyTimer.Start();
+    }
+
+    private void UpdateEnergyBoostStatus()
+    {
+        EnergyBoostStatus.Text = "Energy boost active. Remaining time: " + _extraEnergyRemainingSeconds + " seconds";
+        EnergyBoostStatus.IsVisible = true;
     }
 
     private void Settings_OnClick(object? sender, RoutedEventArgs e)
     {
-        var settingsWindow = new SettingsWindow(this);
-        settingsWindow.Show();
+        _settingsWindow = new SettingsWindow(this);
+        _settingsWindow.Show();
+    }
+
+    public void ShowVacekMode()
+    {
+        _settingsWindow?.ShowVacekMode();
     }
 
     private void Shop_OnClick(object? sender, RoutedEventArgs e)
     {
-        var shopWindow = new ShopWindow();
+        var shopWindow = new ShopWindow(this);
+        _shopWindows.Add(shopWindow);
+        shopWindow.Closed += (_, _) => _shopWindows.Remove(shopWindow);
         ShopUpdater(shopWindow);
         shopWindow.Show();
+    }
+
+    private void UpdateOpenShopWindows()
+    {
+        foreach (var shopWindow in _shopWindows)
+        {
+            ShopUpdater(shopWindow);
+        }
     }
 
     public static void ShopUpdater(ShopWindow shopWindow)
@@ -81,6 +138,14 @@ public partial class MainWindow : Window
         shopWindow.CpSMultiplicatorLevel.Text = "Level: " + Variables.Instance.CpSMultiplicator.Level;
         shopWindow.CpSMultiplicatorPrice.Text = "Price: " + Variables.Instance.CpSMultiplicator.Price;
         shopWindow.CpSMultiplicatorValue.Text = "Value: " + Variables.Instance.CpSMultiplicator.Value;
+
+        shopWindow.ExtraEnergyLevel.Text = "Level: " + Variables.Instance.ExtraEnergy.Level;
+        shopWindow.ExtraEnergyPrice.Text = "Price: " + Variables.Instance.ExtraEnergy.Price;
+        shopWindow.ExtraEnergyValue.Text = "Value: " + Variables.Instance.ExtraEnergy.Value;
+        
+        shopWindow.ModeLevel.Text = "Level: " + Variables.Instance.Mode.Level;
+        shopWindow.ModePrice.Text = "Price: " + Variables.Instance.Mode.Price;
+        shopWindow.ModeValue.Text = "Value: " + (Variables.Instance.Mode.Level > 0 ? "Bought" : "0");
         
         shopWindow.CookieCount.Text = Variables.Instance.CookieCount + Variables.Instance.CookieName;
 
@@ -91,6 +156,7 @@ public partial class MainWindow : Window
         Variables.Instance.ClickCount++;
         Variables.Instance.CookieCount += Variables.Instance.CpC.Value * Variables.Instance.CpCMultiplicator.Value;
         ValueUpdater();
+        UpdateOpenShopWindows();
     }
 
     public void ApplyMode(string cookieName, string imagePath)

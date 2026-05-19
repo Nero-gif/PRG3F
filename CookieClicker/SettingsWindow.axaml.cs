@@ -15,6 +15,10 @@ public partial class SettingsWindow : Window
     public SettingsWindow(MainWindow mainWindow) : this()
     {
         _mainWindow = mainWindow;
+        if (Variables.Instance.Mode.Level > 0)
+        {
+            ShowVacekMode();
+        }
     }
 
     private void CookieModeButton_OnClick(object? sender, RoutedEventArgs e)
@@ -43,5 +47,10 @@ public partial class SettingsWindow : Window
     {
         CookieModeCard.Classes.Set("selected", selectedCard == CookieModeCard);
         VacekModeCard.Classes.Set("selected", selectedCard == VacekModeCard);
+    }
+
+    public void ShowVacekMode()
+    {
+        VacekModeCard.IsVisible = true;
     }
 }

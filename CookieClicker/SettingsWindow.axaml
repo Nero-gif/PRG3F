@@ -90,7 +90,7 @@
                 </Button>
             </Border>
 
-            <Border Name="VacekModeCard" Classes="modeCard">
+            <Border Name="VacekModeCard" Classes="modeCard" IsVisible="False">
                 <Button Name="VacekModeButton" Click="VacekModeButton_OnClick">
                     <StackPanel Orientation="Horizontal" Spacing="18">
                         <Border Width="78"
