@@ -4,6 +4,111 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="CookieClicker.SettingsWindow"
-        Title="SettingsWindow">
-    Welcome to Avalonia!
+        Title="Settings"
+        Background="#2B2B2B">
+    <Window.Styles>
+        <Style Selector="Border.modeCard">
+            <Setter Property="Background" Value="#3A3A3A"/>
+            <Setter Property="BorderBrush" Value="#505050"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="BoxShadow" Value="0 2 10 0 #1A000000"/>
+            <Setter Property="Transitions">
+                <Transitions>
+                    <TransformOperationsTransition Property="RenderTransform" Duration="0.12"/>
+                </Transitions>
+            </Setter>
+        </Style>
+
+        <Style Selector="Border.modeCard:pointerover">
+            <Setter Property="Background" Value="#424242"/>
+            <Setter Property="RenderTransform" Value="scale(1.02)"/>
+            <Setter Property="BoxShadow" Value="0 4 15 0 #33000000"/>
+        </Style>
+
+        <Style Selector="Border.modeCard:pressed">
+            <Setter Property="RenderTransform" Value="scale(0.98)"/>
+        </Style>
+
+        <Style Selector="Border.modeCard.selected">
+            <Setter Property="BorderBrush" Value="#22C55E"/>
+            <Setter Property="BorderThickness" Value="3"/>
+        </Style>
+
+        <Style Selector="Border.modeCard > Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="18"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        </Style>
+
+        <Style Selector="TextBlock.modeTitle">
+            <Setter Property="Foreground" Value="#F4F4F4"/>
+            <Setter Property="FontSize" Value="34"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <Style Selector="TextBlock.modeName">
+            <Setter Property="Foreground" Value="#EAEAEA"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Styles>
+
+    <Grid RowDefinitions="Auto,*" Margin="32" RowSpacing="24">
+        <TextBlock Grid.Row="0"
+                   Text="Mode"
+                   Classes="modeTitle"/>
+
+        <StackPanel Grid.Row="1"
+                    Width="420"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Spacing="16">
+            <Border Name="CookieModeCard" Classes="modeCard selected">
+                <Button Name="CookieModeButton" Click="CookieModeButton_OnClick">
+                    <StackPanel Orientation="Horizontal" Spacing="18">
+                        <Border Width="78"
+                                Height="78"
+                                CornerRadius="39"
+                                ClipToBounds="True"
+                                Background="#343434">
+                            <Image Source="avares://CookieClicker/Images/cookie.jpg"
+                                   Width="78"
+                                   Height="78"
+                                   Stretch="UniformToFill"/>
+                        </Border>
+
+                        <TextBlock Text="Cookie Mode"
+                                   Classes="modeName"/>
+                    </StackPanel>
+                </Button>
+            </Border>
+
+            <Border Name="VacekModeCard" Classes="modeCard">
+                <Button Name="VacekModeButton" Click="VacekModeButton_OnClick">
+                    <StackPanel Orientation="Horizontal" Spacing="18">
+                        <Border Width="78"
+                                Height="78"
+                                CornerRadius="39"
+                                ClipToBounds="True"
+                                Background="#343434">
+                            <Image Source="avares://CookieClicker/Images/vacek.jpg"
+                                   Width="78"
+                                   Height="78"
+                                   Stretch="UniformToFill"/>
+                        </Border>
+
+                        <TextBlock Text="Vacek Mode"
+                                   Classes="modeName"/>
+                    </StackPanel>
+                </Button>
+            </Border>
+        </StackPanel>
+    </Grid>
 </Window>

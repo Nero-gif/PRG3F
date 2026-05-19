@@ -1,6 +1,8 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using Avalonia.Threading;
 
 namespace CookieClicker;
@@ -12,7 +14,7 @@ public class Variables
     public static Variables Instance { get; } = new Variables();
 
     public double CookieCount { get; set; } = 0;
-    public string CookieName { get; set; } = " cookie";
+    public string CookieName { get; set; } = " cookies";
 
     public Upgrade CpS { get; } = new Upgrade { Level = 0, Price = 10, Value = 0 };
     public Upgrade CpC { get; } = new Upgrade { Level = 0, Price = 1, Value = 1 };
@@ -48,7 +50,7 @@ public partial class MainWindow : Window
 
     private void Settings_OnClick(object? sender, RoutedEventArgs e)
     {
-        var settingsWindow = new SettingsWindow();
+        var settingsWindow = new SettingsWindow(this);
         settingsWindow.Show();
     }
 
@@ -84,6 +86,16 @@ public partial class MainWindow : Window
     private void Cookie_OnClick(object? sender, RoutedEventArgs e)
     {
         Variables.Instance.CookieCount += Variables.Instance.CpC.Value * Variables.Instance.CpCMultiplicator.Value;
+        ValueUpdater();
+    }
+
+    public void ApplyMode(string cookieName, string imagePath)
+    {
+        Variables.Instance.CookieName = cookieName;
+
+        using var imageStream = AssetLoader.Open(new Uri(imagePath));
+        CookieImage.Source = new Bitmap(imageStream);
+
         ValueUpdater();
     }
 
