@@ -14,6 +14,8 @@ public class Variables
     public double CookieCount { get; set; } = 0;
     public double CpS { get; set; } = 0;
     public double CpC { get; set; } = 1;
+    
+    public string CookieName { get; set; } = " cookiee";
 }
 
 
@@ -33,7 +35,7 @@ public partial class MainWindow : Window
     private void Timer_Tick(object? sender, EventArgs eventArgs)
     {
         Variables.Instance.CookieCount += Variables.Instance.CpS;
-        CookieCount.Text = Variables.Instance.CookieCount + " Cookies";
+        ValueUpdater(sender, eventArgs);
     }
 
     private void Settings_OnClick(object? sender, RoutedEventArgs e)
@@ -51,6 +53,12 @@ public partial class MainWindow : Window
     private void Cookie_OnClick(object? sender, RoutedEventArgs e)
     {
         Variables.Instance.CookieCount += Variables.Instance.CpC;
-        CookieCount.Text = Variables.Instance.CookieCount + " Cookies";
+        ValueUpdater(sender, e);
+    }
+
+    private void ValueUpdater(object? sender, EventArgs eventArgs)
+    {
+        CPS.Text = Variables.Instance.CpS + Variables.Instance.CookieName + " per second";
+        CookieCount.Text = Variables.Instance.CookieCount + Variables.Instance.CookieName;
     }
 }
