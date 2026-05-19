@@ -21,6 +21,7 @@ public partial class ShopWindow : Window
             Variables.Instance.CpC.Level++;
             Variables.Instance.CpC.Price = (int)(10 * Math.Pow(1.5, Variables.Instance.CpC.Level));
             Variables.Instance.CpC.Value++;
+            Variables.Instance.UpgradeCount++;
             MainWindow.ShopUpdater(this);
         }
         else
@@ -51,6 +52,7 @@ public partial class ShopWindow : Window
             Variables.Instance.CpS.Level++;
             Variables.Instance.CpS.Price = (int)(10 * Math.Pow(1.5, Variables.Instance.CpS.Level));
             Variables.Instance.CpS.Value += .5;
+            Variables.Instance.UpgradeCount++;
             MainWindow.ShopUpdater(this);
         }
         else
@@ -80,6 +82,7 @@ public partial class ShopWindow : Window
             Variables.Instance.CpCMultiplicator.Level++;
             Variables.Instance.CpCMultiplicator.Price = (int)(100 * Math.Pow(2, Variables.Instance.CpCMultiplicator.Level));
             Variables.Instance.CpCMultiplicator.Value ++; 
+            Variables.Instance.UpgradeCount++;
             MainWindow.ShopUpdater(this);
         }
         else
@@ -109,6 +112,7 @@ public partial class ShopWindow : Window
             Variables.Instance.CpSMultiplicator.Level++;
             Variables.Instance.CpSMultiplicator.Price = (int)(100 * Math.Pow(2, Variables.Instance.CpSMultiplicator.Level));
             Variables.Instance.CpSMultiplicator.Value ++;  
+            Variables.Instance.UpgradeCount++;
             MainWindow.ShopUpdater(this);
         }
         else

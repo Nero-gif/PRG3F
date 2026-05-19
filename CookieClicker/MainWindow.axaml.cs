@@ -20,6 +20,9 @@ public class Variables
     public Upgrade CpC { get; } = new Upgrade { Level = 0, Price = 1, Value = 1 };
     public Upgrade CpCMultiplicator { get; } = new Upgrade { Level = 0, Price = 100, Value = 1 };
     public Upgrade CpSMultiplicator { get; } = new Upgrade { Level = 0, Price = 100, Value = 1 };
+    
+    public int ClickCount { get; set; } = 0;
+    public int UpgradeCount { get; set; } = 0;
 }
 
 public class Upgrade
@@ -85,6 +88,7 @@ public partial class MainWindow : Window
 
     private void Cookie_OnClick(object? sender, RoutedEventArgs e)
     {
+        Variables.Instance.ClickCount++;
         Variables.Instance.CookieCount += Variables.Instance.CpC.Value * Variables.Instance.CpCMultiplicator.Value;
         ValueUpdater();
     }
@@ -103,5 +107,8 @@ public partial class MainWindow : Window
     {
         CPS.Text = Variables.Instance.CpS.Value * Variables.Instance.CpSMultiplicator.Value + Variables.Instance.CookieName + " per second";
         CookieCount.Text = Variables.Instance.CookieCount + Variables.Instance.CookieName;
+        CPC.Text = Variables.Instance.CpC.Value * Variables.Instance.CpCMultiplicator.Value + Variables.Instance.CookieName + " per click";
+        ClickCount.Text = Variables.Instance.ClickCount + " clicks";
+        UpgradeCount.Text = Variables.Instance.UpgradeCount + " upgrades bought";
     }
 }
