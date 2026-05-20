@@ -40,7 +40,7 @@ public partial class ShopWindow : Window
                 Height = 120,
                 Content = new TextBlock
                 {
-                    Text = "You do not have enaught" + Variables.Instance.CookieName,
+                    Text = "You do not have enough" + Variables.Instance.CookieName,
                     HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
                     VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center
                 }
@@ -71,7 +71,7 @@ public partial class ShopWindow : Window
                 Height = 120,
                 Content = new TextBlock
                 {
-                    Text = "You do not have enaught" + Variables.Instance.CookieName,
+                    Text = "You do not have enough" + Variables.Instance.CookieName,
                     HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
                     VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center
                 }
@@ -101,7 +101,7 @@ public partial class ShopWindow : Window
                 Height = 120,
                 Content = new TextBlock
                 {
-                    Text = "You do not have enaught" + Variables.Instance.CookieName,
+                    Text = "You do not have enough" + Variables.Instance.CookieName,
                     HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
                     VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center
                 }
@@ -131,7 +131,7 @@ public partial class ShopWindow : Window
                 Height = 120,
                 Content = new TextBlock
                 {
-                    Text = "You do not have enaught" + Variables.Instance.CookieName,
+                    Text = "You do not have enough" + Variables.Instance.CookieName,
                     HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
                     VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center
                 }
@@ -161,7 +161,7 @@ public partial class ShopWindow : Window
                 Height = 120,
                 Content = new TextBlock
                 {
-                    Text = "You do not have enaught" + Variables.Instance.CookieName,
+                    Text = "You do not have enough" + Variables.Instance.CookieName,
                     HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
                     VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center
                 }
@@ -207,7 +207,7 @@ public partial class ShopWindow : Window
                 Height = 120,
                 Content = new TextBlock
                 {
-                    Text = "You do not have enaught" + Variables.Instance.CookieName,
+                    Text = "You do not have enough" + Variables.Instance.CookieName,
                     HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
                     VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center
                 }

@@ -42,7 +42,7 @@
             <TextBlock Name="CPS" Text="0 cookies per second" HorizontalAlignment="Center"></TextBlock>
             <TextBlock Name="CPC" Text="1 cookie per click" HorizontalAlignment="Center"></TextBlock>
             <TextBlock Name="EnergyBoostStatus" Text="" HorizontalAlignment="Center" IsVisible="False"></TextBlock>
-            <Button Name="CookieButton" Classes="cookieButton" Click="Cookie_OnClick" Background="Transparent" BorderThickness="0">
+            <Button Name="CookieButton" Classes="cookieButton" Click="Cookie_OnClick" Background="Transparent" BorderThickness="0" HorizontalAlignment="Center">
                 <Border CornerRadius="150" Width="300" Height="300" ClipToBounds="True">
                     <Image Name="CookieImage" Source="avares://CookieClicker/Images/cookie.jpg" Width="300" Height="300" Stretch="UniformToFill"/>
                 </Border>
