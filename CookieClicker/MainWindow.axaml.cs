@@ -177,4 +177,38 @@ public partial class MainWindow : Window
         ClickCount.Text = Variables.Instance.ClickCount + " clicks";
         UpgradeCount.Text = Variables.Instance.UpgradeCount + " upgrades bought";
     }
+
+    private void ResetButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Variables.Instance.CookieCount = 0;
+        Variables.Instance.CookieName = " cookies";
+        Variables.Instance.CpS.Level = 0;
+        Variables.Instance.CpS.Price = 10;
+        Variables.Instance.CpS.Value = 0;
+        Variables.Instance.CpC.Level = 0;
+        Variables.Instance.CpC.Price = 1;
+        Variables.Instance.CpC.Value = 1;
+        Variables.Instance.CpCMultiplicator.Level = 0;
+        Variables.Instance.CpCMultiplicator.Price = 100;
+        Variables.Instance.CpCMultiplicator.Value = 1;
+        Variables.Instance.CpSMultiplicator.Level = 0;
+        Variables.Instance.CpSMultiplicator.Price = 100;
+        Variables.Instance.CpSMultiplicator.Value = 1;
+        Variables.Instance.ExtraEnergy.Level = 0;
+        Variables.Instance.ExtraEnergy.Price = 1000;
+        Variables.Instance.ExtraEnergy.Value = 0;
+        Variables.Instance.Mode.Level = 0;
+        Variables.Instance.Mode.Price = 2000;
+        Variables.Instance.Mode.Value = 0;
+        Variables.Instance.ClickCount = 0;
+        Variables.Instance.UpgradeCount = 0;
+        ValueUpdater();
+        UpdateOpenShopWindows();
+        _extraEnergyTimer.Stop();
+        _cpsTimer.Interval = TimeSpan.FromSeconds(1);
+        EnergyBoostStatus.IsVisible = false;
+        EnergyBoostStatus.Text = "";
+        _extraEnergyRemainingSeconds = 0;
+        ApplyMode(" cookies", "avares://CookieClicker/Images/cookie.jpg");
+    }
 }

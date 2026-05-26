@@ -49,6 +49,8 @@
             </Button>
             <TextBlock Name="ClickCount" Text="0 clicks" HorizontalAlignment="Center"></TextBlock>
             <TextBlock Name="UpgradeCount" Text="0 upgrades bought" HorizontalAlignment="Center"></TextBlock>
+            <!-- Reset Button -->
+            <Button Name="ResetButton" Content="Reset" Classes="navButton" Click="ResetButton_OnClick" HorizontalAlignment="Center" Margin="0,20,0,0"/>
         </StackPanel>
         
     </Grid>
