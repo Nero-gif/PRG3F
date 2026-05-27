@@ -1,0 +1,147 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|c:\\users\\timofii.simon\\source\\repos\\cookieclicker\\cookieclicker\\vobchod.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|solutionrelative:cookieclicker\\vobchod.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|c:\\users\\timofii.simon\\source\\repos\\cookieclicker\\cookieclicker\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|solutionrelative:cookieclicker\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|c:\\users\\timofii.simon\\source\\repos\\cookieclicker\\cookieclicker\\vobchod.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|solutionrelative:cookieclicker\\vobchod.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|c:\\users\\timofii.simon\\source\\repos\\cookieclicker\\cookieclicker\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|solutionrelative:cookieclicker\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|c:\\users\\timofii.simon\\source\\repos\\cookieclicker\\cookieclicker\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|solutionrelative:cookieclicker\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|c:\\users\\timofii.simon\\source\\repos\\cookieclicker\\cookieclicker\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|solutionrelative:cookieclicker\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|c:\\users\\timofii.simon\\source\\repos\\cookieclicker\\cookieclicker\\roshen.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{BDA901A1-CE3A-4520-A928-9123FD06C7CE}|CookieClicker\\CookieClicker.csproj|solutionrelative:cookieclicker\\roshen.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "vobchod.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\vobchod.xaml.cs",
+              "RelativeDocumentMoniker": "CookieClicker\\vobchod.xaml.cs",
+              "ToolTip": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\vobchod.xaml.cs",
+              "RelativeToolTip": "CookieClicker\\vobchod.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T07:07:22.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "vobchod.xaml",
+              "DocumentMoniker": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\vobchod.xaml",
+              "RelativeDocumentMoniker": "CookieClicker\\vobchod.xaml",
+              "ToolTip": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\vobchod.xaml",
+              "RelativeToolTip": "CookieClicker\\vobchod.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-26T07:04:51.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameState.cs",
+              "DocumentMoniker": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\GameState.cs",
+              "RelativeDocumentMoniker": "CookieClicker\\GameState.cs",
+              "ToolTip": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\GameState.cs",
+              "RelativeToolTip": "CookieClicker\\GameState.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAcwAYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T06:18:56.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "CookieClicker\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\MainWindow.xaml",
+              "RelativeToolTip": "CookieClicker\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-19T06:10:05.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "CookieClicker\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\MainWindow.xaml.cs",
+              "RelativeToolTip": "CookieClicker\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAqwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T06:10:01.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "roshen.jpg - Bitmap [800x450, 24 bit\u016F, JPG]",
+              "DocumentMoniker": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\roshen.jpg",
+              "RelativeDocumentMoniker": "CookieClicker\\roshen.jpg",
+              "ToolTip": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\roshen.jpg - Bitmap [800x450, 24 bit\u016F, JPG]",
+              "RelativeToolTip": "CookieClicker\\roshen.jpg - Bitmap [800x450, 24 bit\u016F, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-05-26T06:33:14.947Z",
+              "EditorCaption": " - Bitmap [800x450, 24 bit\u016F, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\App.xaml",
+              "RelativeDocumentMoniker": "CookieClicker\\App.xaml",
+              "ToolTip": "C:\\Users\\timofii.simon\\source\\repos\\CookieClicker\\CookieClicker\\App.xaml",
+              "RelativeToolTip": "CookieClicker\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-26T07:05:19.066Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

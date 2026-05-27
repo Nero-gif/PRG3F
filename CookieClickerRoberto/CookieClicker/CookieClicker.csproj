@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="UpgradesWindow.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="8a92fde1-9174-3edc-47ac-19b144f6683b.png" />
+    <None Remove="pecene-do-kavi-z-aromatom-pryazenogo-moloka-95kg-roshen0.jfif" />
+    <None Remove="roshen.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="UpgradesWindow.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="8a92fde1-9174-3edc-47ac-19b144f6683b.png" />
+    <Resource Include="pecene-do-kavi-z-aromatom-pryazenogo-moloka-95kg-roshen0.jfif" />
+    <Resource Include="roshen.jpg" />
+  </ItemGroup>
+
+</Project>

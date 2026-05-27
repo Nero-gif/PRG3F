@@ -1,0 +1,60 @@
+﻿<Window x:Class="CookieClicker.vobchod"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CookieClicker"
+        Title="vobchod" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/bg.jpg"/>
+        </Grid.Background>
+        <Label Content="kup si moji babicku prosim" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+		<Button x:Name="btn1" Content="Lepší kurzor" HorizontalAlignment="Center" Margin="0,91,0,0" VerticalAlignment="Top" Width="126" Height="43" Click="btn1_Click"/>
+		<Button x:Name="btn2" Content="Dvojité kliknutí" HorizontalAlignment="Center" Margin="0,139,0,0" VerticalAlignment="Top" Width="126" Height="43" Click="btn2_Click"/>
+        <Button x:Name="btn3" Content="Babička pekařka" HorizontalAlignment="Center" Margin="0,187,0,0" VerticalAlignment="Top" Width="126" Height="43" Click="btn3_Click"/>
+		<Button x:Name="btn4" Content="Malá pekárna" HorizontalAlignment="Center" Margin="0,235,0,0" VerticalAlignment="Top" Width="126" Height="43" Click="btn4_Click"/>
+		<Button x:Name="btn5" Content="Továrna na sušenky" HorizontalAlignment="Center" Margin="0,283,0,0" VerticalAlignment="Top" Width="126" Height="43" Click="btn5_Click"/>
+        <Label x:Name="lbl1" Content="5" HorizontalAlignment="Left" Margin="468,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.012,0.43" Width="179" FontSize="18" FontWeight="Bold" Height="42">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7F0000FF" Offset="0"/>
+                    <GradientStop Color="#84FFEA00" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label x:Name="lbl2" Content="5" HorizontalAlignment="Left" Margin="468,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.012,0.43" Width="179" FontSize="18" FontWeight="Bold" Height="42">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7F0000FF" Offset="0"/>
+                    <GradientStop Color="#84FFEA00" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label x:Name="lbl3" Content="5" HorizontalAlignment="Left" Margin="468,188,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.012,0.43" Width="179" FontSize="18" FontWeight="Bold" Height="42">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7F0000FF" Offset="0"/>
+                    <GradientStop Color="#84FFEA00" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label x:Name="lbl4" Content="5" HorizontalAlignment="Left" Margin="468,235,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.012,0.43" Width="179" FontSize="18" FontWeight="Bold" Height="42">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7F0000FF" Offset="0"/>
+                    <GradientStop Color="#84FFEA00" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label x:Name="lbl5" Content="5" HorizontalAlignment="Left" Margin="468,284,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.012,0.43" Width="179" FontSize="18" FontWeight="Bold" Height="42">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7F0000FF" Offset="0"/>
+                    <GradientStop Color="#84FFEA00" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+
+    </Grid>
+</Window>
