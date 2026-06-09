@@ -4,7 +4,7 @@ namespace cinema
 {
     public partial class ReservationWindow : Window
     {
-        public ReservationWindow()
+        public ReservationWindow(MainWindow mainWindow)
         {
             InitializeComponent();
         }

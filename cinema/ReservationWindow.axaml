@@ -33,7 +33,7 @@
     <Grid Background="#1C1C1C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Border Classes="card" MaxWidth="400" VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Spacing="10">
-                <TextBlock Text="Shrnutí vaší rezervace" Classes="title"/>
+                <TextBlock Name="SummaryHeader" Text="Shrnutí vaší rezervace" Classes="title"/>
 
                 <TextBlock Text="Film:" Classes="label"/>
                 <TextBlock Name="FilmTextBlock" Classes="value"/>
@@ -42,7 +42,7 @@
                 <TextBlock Name="SeatTextBlock" Classes="value"/>
 
                 <TextBlock Text="Doplňky:" Classes="label"/>
-                <TextBlock Name="ExtrasTextBlock" Text="Bez doplňků" Classes="value"/>
+                <TextBlock Name="ExtrasTextBlock" Text="" Classes="value"/>
             </StackPanel>
         </Border>
     </Grid>
