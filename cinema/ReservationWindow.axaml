@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="400"
+        x:Class="cinema.ReservationWindow"
+        Title="Shrnutí rezervace"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Styles>
+        <Style Selector="Border.card">
+            <Setter Property="Padding" Value="30"/>
+            <Setter Property="Background" Value="#2E2E2E"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="BoxShadow" Value="0 4 8 0 rgba(0,0,0,0.4)"/>
+        </Style>
+        <Style Selector="TextBlock.title">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0 0 0 20"/>
+        </Style>
+        <Style Selector="TextBlock.label">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style Selector="TextBlock.value">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0 0 0 15"/>
+        </Style>
+    </Window.Styles>
+
+    <Grid Background="#1C1C1C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Border Classes="card" MaxWidth="400" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Spacing="10">
+                <TextBlock Text="Shrnutí vaší rezervace" Classes="title"/>
+
+                <TextBlock Text="Film:" Classes="label"/>
+                <TextBlock Name="FilmTextBlock" Classes="value"/>
+
+                <TextBlock Text="Typ sedadla:" Classes="label"/>
+                <TextBlock Name="SeatTextBlock" Classes="value"/>
+
+                <TextBlock Text="Doplňky:" Classes="label"/>
+                <TextBlock Name="ExtrasTextBlock" Text="Bez doplňků" Classes="value"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
