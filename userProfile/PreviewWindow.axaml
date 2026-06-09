@@ -1,0 +1,55 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="350"
+        x:Class="userProfile.PreviewWindow"
+        Title="Náhled nastavení"
+        Background="#1A1A1A"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False">
+
+    <Window.Styles>
+        <Style Selector="Button.modern">
+            <Setter Property="Background" Value="#4C4C4C"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="15,10"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Transitions">
+                <Transitions>
+                    <BrushTransition Property="Background" Duration="0.2"/>
+                </Transitions>
+            </Setter>
+        </Style>
+        <Style Selector="Button.modern:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#666666"/>
+        </Style>
+    </Window.Styles>
+
+    <Border Background="#252525" CornerRadius="10" Padding="25" Margin="20" BoxShadow="0 5 20 0 #101010">
+        <Grid RowDefinitions="Auto, *, Auto">
+            <TextBlock Grid.Row="0" Text="Náhled nastavení" FontSize="24" FontWeight="Bold" Foreground="#EAEAEA" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            
+            <StackPanel Grid.Row="1" Spacing="18">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Jazyk" FontWeight="Medium" FontSize="16" Foreground="#AAAAAA"/>
+                    <TextBlock Name="LanguageTextBlock" FontSize="18" Foreground="#E0E0E0"/>
+                </StackPanel>
+
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Motiv" FontWeight="Medium" FontSize="16" Foreground="#AAAAAA"/>
+                    <TextBlock Name="ThemeTextBlock" FontSize="18" Foreground="#E0E0E0"/>
+                </StackPanel>
+
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Zapnuté volby" FontWeight="Medium" FontSize="16" Foreground="#AAAAAA"/>
+                    <TextBlock Name="OptionsTextBlock" FontSize="18" Foreground="#E0E0E0" TextWrapping="Wrap"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Button Grid.Row="2" Name="CloseButton" Content="Zavřít" Classes="modern" Margin="0,20,0,0"/>
+        </Grid>
+    </Border>
+</Window>

@@ -2,8 +2,70 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="420" d:DesignHeight="580"
         x:Class="userProfile.MainWindow"
-        Title="userProfile">
-    Welcome to Avalonia!
+        Title="Nastavení profilu"
+        Background="#1A1A1A"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False">
+
+    <Window.Styles>
+        <Style Selector="Button.modern">
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="15,10"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Transitions">
+                <Transitions>
+                    <BrushTransition Property="Background" Duration="0.2"/>
+                </Transitions>
+            </Setter>
+        </Style>
+        <Style Selector="Button.modern:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#005A9E"/>
+        </Style>
+    </Window.Styles>
+
+    <Grid Margin="25">
+        <StackPanel Spacing="20">
+            <TextBlock Text="Nastavení profilu" FontSize="28" FontWeight="Bold" Foreground="#EAEAEA" HorizontalAlignment="Center"/>
+
+            <!-- Výběr jazyka -->
+            <Border Background="#252525" CornerRadius="10" Padding="20" BoxShadow="0 5 15 0 #101010">
+                <StackPanel Spacing="12">
+                    <TextBlock Text="Jazyk aplikace" Foreground="#E0E0E0" FontSize="18" FontWeight="Medium"/>
+                    <ComboBox Name="LanguageComboBox" SelectedIndex="0" Background="#333333" Foreground="White" BorderBrush="#444444" CornerRadius="5">
+                        <ComboBoxItem Content="Čeština"/>
+                        <ComboBoxItem Content="Angličtina"/>
+                        <ComboBoxItem Content="Němčina"/>
+                    </ComboBox>
+                </StackPanel>
+            </Border>
+
+            <!-- Výběr motivu -->
+            <Border Background="#252525" CornerRadius="10" Padding="20" BoxShadow="0 5 15 0 #101010">
+                <StackPanel Spacing="12">
+                    <TextBlock Text="Motiv" Foreground="#E0E0E0" FontSize="18" FontWeight="Medium"/>
+                    <RadioButton Name="LightThemeRadioButton" Content="Světlý" GroupName="Theme" Foreground="#D0D0D0"/>
+                    <RadioButton Name="DarkThemeRadioButton" Content="Tmavý" GroupName="Theme" IsChecked="True" Foreground="#D0D0D0"/>
+                    <RadioButton Name="BlueThemeRadioButton" Content="Modrý" GroupName="Theme" Foreground="#D0D0D0"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Další volby -->
+            <Border Background="#252525" CornerRadius="10" Padding="20" BoxShadow="0 5 15 0 #101010">
+                <StackPanel Spacing="12">
+                    <TextBlock Text="Upozornění a další" Foreground="#E0E0E0" FontSize="18" FontWeight="Medium"/>
+                    <CheckBox Name="EmailNotificationsCheckBox" Content="E-mailová upozornění" Foreground="#D0D0D0"/>
+                    <CheckBox Name="ShowTipsCheckBox" Content="Zobrazovat tipy" Foreground="#D0D0D0"/>
+                    <CheckBox Name="AutoSaveCheckBox" Content="Automatické ukládání" Foreground="#D0D0D0"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Tlačítko pro náhled -->
+            <Button Name="PreviewButton" Content="Zobrazit náhled" Classes="modern" Margin="0 25 0 0" Click="PreviewButton_OnClick"/>
+        </StackPanel>
+    </Grid>
 </Window>
