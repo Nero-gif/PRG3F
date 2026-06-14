@@ -42,7 +42,8 @@ namespace userProfile
             // previewWindow.Show(this);
             
             //jazyk
-            previewWindow.LanguageTextBlock.Text = LanguageComboBox.SelectedItem.ToString();
+            // TODO: tahle věc nefunguje, musí se to předělat, musí se nějak získat obsah vybraného itemu 
+            // previewWindow.LanguageTextBlock.Text = LanguageComboBox.SelectedItem.ToString();
             // if (LanguageComboBox.SelectedItem.ToString() = "Čeština")
             // {
             //     
@@ -84,12 +85,7 @@ namespace userProfile
             {
                 previewWindow.OptionsTextBlock.Text += "Nabízet tipy\n";
             }
-            else
-            {
-                
-            }
-            
-            previewWindow.Show();
+           previewWindow.Show();
         }
     }
 }
