@@ -21,7 +21,7 @@ public partial class MainWindow : Window
         var reservationWindow = new ReservationWindow(this);
         if (FilmComboBox.SelectedItem == null)
         {
-            reservationWindow.FilmTextBlock.Text = "Movie was not selevted. User is an idiot";
+            reservationWindow.FilmTextBlock.Text = "Movie was not selected. User is an idiot";
             reservationWindow.SummaryHeader.Text = "User is an idiot";
         }
         else
