@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="testLibrary.MainWindow"
+        Title="testLibrary">
+    <StackPanel>
+        <StackPanel>
+            <TextBlock Text="Vyberte knihu"></TextBlock>
+            <ComboBox Name="BookComboBox">
+                <ComboBoxItem Name="CblBookLotr" Content="Lort of the Ring"/>
+                <ComboBoxItem Name="CblBookFromBloodAndAsh" Content="From blood and ash"/>
+                <ComboBoxItem Name="CblBookTheColourOfMagic" Content="Colour of magic"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Text="Vyberte délku rezervace"></TextBlock>
+            <RadioButton Name="Lenght14" Content="14 dní"/>
+            <RadioButton Name="Lenght30" Content="30 dní"/>
+            <RadioButton Name="Lenght60" Content="60 dní"/>
+            
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Text="Možnosti"></TextBlock>
+            <CheckBox Name="OptionMail" Content="Zaslat upozornění na konec výpůjční doby na email."/>
+            <CheckBox Name="OptionJacket" Content="Zapůjčit knihu s přebalem"/>
+            <CheckBox Name="OptionExtension" Content="Automaticky prodlužovat dobu výpůjčky"/>
+            <CheckBox Name="OptionConditions" Content="Souhlasím s podmínkamy vypůjčení."/>
+        </StackPanel>
+        <Button Name="ShowSummary" Content="Zobrazit shrnutí" Click="ShowSummary_OnClick"></Button>
+    </StackPanel>
+</Window>
